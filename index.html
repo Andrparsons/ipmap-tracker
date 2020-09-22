@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="page-title">IP Address Tracker</h1>
+      <div class="input-group">
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <button class="submit"><img src="./images/icon-arrow.svg" /></button>
+      </div>
+      <div class="response-group">
+        <h2 class="response-title">IP Address</h2>
+        <p class="response-text ip"></p>
+        <h2 class="response-title">Location</h2>
+        <p class="response-text location"></p>
+        <h2 class="response-title">Timezone</h2>
+        <p class="response-text timezone">UTC<span class="time"></span></p>
+        <h2 class="response-title">ISP</h2>
+        <p class="response-text isp"></p>
+      </div>
+    </header>
+    <div class="map"></div>
+  </body>
+</html>
