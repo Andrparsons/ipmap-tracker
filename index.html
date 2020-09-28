@@ -23,20 +23,37 @@
     <header class="header">
       <h1 class="page-title">IP Address Tracker</h1>
       <div class="input-group">
-        <input type="text" placeholder="Search for any IP address or domain" />
-        <button class="submit"><img src="./images/icon-arrow.svg" /></button>
+        <input
+          class="input-ip"
+          type="text"
+          placeholder="Search for any IP address or domain"
+        />
+        <button class="submit-ip">
+          <img class="arrow-icon" src="./images/icon-arrow.svg" />
+        </button>
       </div>
-      <div class="response-group">
-        <h2 class="response-title">IP Address</h2>
-        <p class="response-text ip"></p>
-        <h2 class="response-title">Location</h2>
-        <p class="response-text location"></p>
-        <h2 class="response-title">Timezone</h2>
-        <p class="response-text timezone">UTC<span class="time"></span></p>
-        <h2 class="response-title">ISP</h2>
-        <p class="response-text isp"></p>
+      <div class="response">
+        <div class="response-group">
+          <h2 class="response-group-title">IP Address</h2>
+          <p class="response-group-text ip">Loading...</p>
+        </div>
+        <div class="response-group">
+          <h2 class="response-group-title">Location</h2>
+          <p class="response-group-text location">Loading...</p>
+        </div>
+        <div class="response-group">
+          <h2 class="response-group-title">Timezone</h2>
+          <p class="response-group-text timezone">
+            UTC<span class="time"></span>
+          </p>
+        </div>
+        <div class="response-group">
+          <h2 class="response-group-title">ISP</h2>
+          <p class="response-group-text isp">Loading...</p>
+        </div>
       </div>
     </header>
     <div class="map"></div>
+    <script src="./script.js"></script>
   </body>
 </html>

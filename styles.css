@@ -2,6 +2,9 @@
   /* colours */
   --veryDarkGray: hsl(0, 0%, 17%);
   --darkGray: hsl(0, 0%, 59%);
+
+  /* shadows */
+  --shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.098);
 }
 
 html {
@@ -23,6 +26,7 @@ body {
   background-image: url("./images/pattern-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  max-height: 300px;
 }
 
 .page-title {
@@ -36,28 +40,109 @@ body {
 }
 
 .input-group {
+  display: flex;
+  margin: 1.5rem;
+  box-shadow: var(--shadow);
+  max-width: 555px;
+}
+
+@media (min-width: 600px) {
+  .input-group {
+    margin: 1.5rem auto;
+  }
+}
+
+.input-ip {
+  font-size: 1.125rem;
+  padding: 1em 1.33em;
+  min-width: 0;
+  flex: 1;
+  border-radius: 15px 0 0 15px;
+  border: none;
+}
+
+.input-ip::placeholder {
+  font-size: 0.835rem;
+}
+
+.submit-ip {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border: none;
+  flex: 0;
+  border-radius: 0 15px 15px 0;
+}
+
+.arrow-icon {
+  width: 0.375rem;
+  height: auto;
+}
+
+.response {
+  background-color: #ffffff;
+  margin: 1.5rem;
+  border-radius: 0.9375rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
 }
 
 .response-group {
-  background-color: #ffffff;
-  margin: 0 1.5rem;
-  border-radius: 0.9375rem;
-  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.098);
+  margin-top: 1.5rem;
 }
 
-.response-title {
+.response-group:first-child {
+  margin: 0;
+}
+
+.response-group-title {
   font-weight: 700;
   font-size: 0.625rem;
   line-height: 1.2;
   letter-spacing: 1.45px;
   text-transform: uppercase;
   color: var(--darkGray);
+  margin: 0;
 }
 
-.response-text {
+.response-group-text {
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.2;
-  letter-spacing: -0.178;
+  letter-spacing: -0.178px;
   color: var(--veryDarkGray);
+  margin: 0.35em 0 0 0;
+}
+
+@media (min-width: 800px) {
+  .response {
+    text-align: left;
+    flex-direction: row;
+  }
+
+  .response-group {
+    margin: 0;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .response {
+    margin: 1.5rem auto;
+  }
+
+  .response-group-title {
+    font-size: 0.75rem;
+    letter-spacing: 1.75px;
+  }
+
+  .response-group-text {
+    font-size: 1.625rem;
+    line-height: 1.15;
+    letter-spacing: -0.233px;
+  }
 }
