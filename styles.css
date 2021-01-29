@@ -146,3 +146,8 @@ body {
     letter-spacing: -0.233px;
   }
 }
+
+#map-component {
+  height: calc(100vh - 300px);
+  z-index: -1;
+}
